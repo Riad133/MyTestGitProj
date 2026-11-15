@@ -1,0 +1,195 @@
+using CPV_Modeling.Models;
+using System;
+using System.Collections.Generic;
+
+namespace CPV_Modeling.Dtos
+{
+    public class UnifiedModel
+    {
+        // =========================================================
+        // COMMON - LOAN + DEPOSIT
+        // =========================================================
+
+        public string TrackingNumber { get; set; }
+
+        public string AccountName { get; set; }
+
+        public string BranchName { get; set; }
+
+        public string ContactNo { get; set; }
+
+        public string OrganizationName { get; set; }
+
+        public string Profession { get; set; }
+
+        public string Gender { get; set; }
+
+        public string InformationFor { get; set; }
+
+
+        // =========================================================
+        // COMMON - DEPOSIT + LOAN CUSTOMER INFORMATION
+        // =========================================================
+
+        public string OrgOwnerName { get; set; }
+
+        public string NID { get; set; }
+
+        public string FatherName { get; set; }
+
+        public string MotherName { get; set; }
+
+        public string Passport { get; set; }
+
+        public long DateOfBirthUnix { get; set; }
+
+        public DateTime? DateOfBirth { get; set; }
+
+        public int AccountTypeID { get; set; }
+
+
+        // =========================================================
+        // COMMON ADDRESS
+        // =========================================================
+
+        public AddressInfoRequestModel Address { get; set; }
+
+
+        // =========================================================
+        // LOAN SPECIFIC
+        // =========================================================
+
+        public string SOL { get; set; }
+
+        public string AccountType { get; set; }
+
+        public long LoanCreatedAt { get; set; }
+
+        public decimal Amount { get; set; }
+
+        public string EntrySource { get; set; }
+
+        public string InitiateBy { get; set; }
+
+        public string OperationMode { get; set; }
+
+
+        // =========================================================
+        // DEPOSIT SPECIFIC
+        // =========================================================
+
+        public string BusinessSegmentType { get; set; }
+
+        public string NOB { get; set; } = "0";
+
+        public string Sol { get; set; }
+
+        public AddressInfoRequestModel ResAddress { get; set; }
+
+        public AddressInfoRequestModel OrgAddress { get; set; }
+
+
+        // =========================================================
+        // VERIFICATION LIST
+        // =========================================================
+
+        public List<CommonModelData> VerificationList { get; set; }
+    }
+
+
+    public class CommonModelData
+    {
+        public string VerificationType { get; set; }
+
+        // =========================================================
+        // COMMON VERIFICATION FIELDS
+        // =========================================================
+
+        public string ApplicantId { get; set; }
+
+        public string Name { get; set; }
+
+        public string ContactNo { get; set; }
+
+        public string NID { get; set; }
+
+        public string Gender { get; set; }
+
+        public string Profession { get; set; }
+
+        public string Designation { get; set; }
+
+        public string RelationWithApplicant { get; set; }
+
+        public string ContactPerson { get; set; }
+
+        public string OrganizationName { get; set; }
+
+        public AddressInfoRequestModel Address { get; set; }
+
+        public string AddressHubCode { get; set; }
+
+        public decimal? BankIncome { get; set; } = 0;
+
+        public decimal? CashIncome { get; set; } = 0;
+
+        public decimal? TotalIncome { get; set; } = 0;
+
+
+        // =========================================================
+        // ORGANIZATION SPECIFIC
+        // =========================================================
+
+        public string PrevOrgName { get; set; }
+
+
+        // =========================================================
+        // RENTAL SPECIFIC
+        // =========================================================
+
+        public string TenantName { get; set; }
+
+        public decimal RentPerMonth { get; set; }
+
+
+        // =========================================================
+        // CHAMBER SPECIFIC
+        // =========================================================
+
+        public string ChamberName { get; set; }
+
+
+        // =========================================================
+        // BANK STATEMENT / UNDATED CHEQUE
+        // =========================================================
+
+        public string BankName { get; set; }
+
+        public string BranchName { get; set; }
+
+        public string AccountNumber { get; set; }
+
+        public string InformationFor { get; set; }
+
+
+        // =========================================================
+        // TUITION SPECIFIC
+        // =========================================================
+
+        public string InstitutionName { get; set; }
+
+        public string SubjectOfTeaching { get; set; }
+
+        public string TuitionType { get; set; }
+
+        public int TotalBatch { get; set; }
+
+        public string TimeAndDay { get; set; }
+
+        public int TotalStudents { get; set; }
+
+        public decimal AvgFeesPerStudents { get; set; }
+
+        public decimal TotalTuitionIncome { get; set; }
+    }
+}
