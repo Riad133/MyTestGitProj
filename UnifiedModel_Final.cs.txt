@@ -1,13 +1,13 @@
 using CPV_Modeling.Models;
 using System;
-using System.Collections.Generic;
+using System.Collections.Generic;  
 
 namespace CPV_Modeling.Dtos
 {
-    public class UnifiedModel
+    public class UnifiedModel 
     {
         // =========================================================
-        // COMMON - LOAN + DEPOSIT
+        // COMMON - LOAN + DEPOSIT Model
         // =========================================================
 
         public string TrackingNumber { get; set; }
