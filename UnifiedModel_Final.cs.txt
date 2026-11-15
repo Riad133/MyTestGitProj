@@ -26,6 +26,8 @@ namespace CPV_Modeling.Dtos
 
         public string InformationFor { get; set; }
 
+        public bool IsImageUpload { get; set; }
+
 
         // =========================================================
         // COMMON - DEPOSIT + LOAN CUSTOMER INFORMATION
